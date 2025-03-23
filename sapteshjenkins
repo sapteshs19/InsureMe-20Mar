@@ -42,7 +42,7 @@ pipeline {
             }
       stage('Ansible Playbook') {
       steps {
-        ansiblePlaybook credentialsId: 'sshkey', disableHostKeyChecking: true, inventory: 'deploy.yml', playbook: '', vaultTmpPath: ''
+       ansiblePlaybook credentialsId: 'sshkey', disableHostKeyChecking: true, inventory: '/etc/ansible/ansible.cfg', playbook: '', vaultTmpPath: ''
                                 }
             }
       
